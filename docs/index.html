@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clara Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Clara.">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f1ea;
+      --card: rgba(255, 255, 255, 0.82);
+      --text: #1f1712;
+      --muted: #6f6257;
+      --accent: #d97757;
+      --line: rgba(31, 23, 18, 0.08);
+      --shadow: 0 24px 80px rgba(84, 50, 28, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(217, 119, 87, 0.15), transparent 28%),
+        linear-gradient(180deg, #f9f5ef 0%, var(--bg) 100%);
+      line-height: 1.6;
+    }
+
+    .shell {
+      width: min(860px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 80px;
+    }
+
+    .hero {
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(217, 119, 87, 0.12);
+      color: #9e543d;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(2.2rem, 6vw, 4.1rem);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .card {
+      margin-top: 28px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    h2 {
+      margin: 28px 0 10px;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0 0 18px 20px;
+      padding: 0;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .updated {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact {
+      padding-top: 8px;
+      border-top: 1px solid var(--line);
+      margin-top: 10px;
+    }
+
+    a {
+      color: #9e543d;
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        width: min(100% - 20px, 860px);
+        padding-top: 28px;
+      }
+
+      .card {
+        padding: 22px 18px;
+        border-radius: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <span class="eyebrow">Clara</span>
+      <h1>Privacy Policy</h1>
+      <p class="intro">How Clara stores project conversations, uses online services, and handles deletion.</p>
+    </header>
+
+    <section class="card">
+      <p class="updated">Last updated: October 21, 2026</p>
+
+      <p>Clara helps you develop project context through voice and text conversations. This policy explains what the current project-conversation app stores, what it sends to other services, and the limits of its controls. It also covers information shared by earlier beta versions.</p>
+
+      <h2>1. Information Stored by the App</h2>
+
+      <p>Clara saves project titles, a project identifier, dates, your messages, Clara’s replies, and generated project context and memory. Context includes summaries, goals, decisions, constraints, unknowns, and follow-up questions.</p>
+
+      <p>Project files, including conversations and generated memory, are saved in Clara’s document storage. Clara prefers iCloud Drive when usable, with on-device storage as a fallback. Files include structured data and readable context exports. App preferences, such as voice choice, Spoken Replies, and any name entered during onboarding, are stored on the device. Older notes, memory files, and session records may remain from previous versions.</p>
+
+      <p>Voice recordings are saved on the device for transcription and recovery. Clara attempts to remove the recovery copy once its transcript is saved to the project conversation or you choose to delete the saved recording. It also prunes older recovery files. Failed or interrupted captures can leave recordings for later cleanup; deletion is not guaranteed to happen immediately.</p>
+
+      <h2>2. Voice and AI Processing</h2>
+
+      <p>These features send content off your device:</p>
+
+      <ul>
+        <li><strong>Transcription:</strong> Recorded audio is sent to Groq to turn speech into text.</li>
+        <li><strong>Conversation and context:</strong> Your message, the project’s conversation history, title, and existing context are sent through OpenRouter to model providers to generate replies, update project context, and suggest a title. The current app requests an OpenAI model through OpenRouter.</li>
+        <li><strong>Spoken replies:</strong> When enabled, Clara sends its reply text to ElevenLabs to generate speech in your selected voice. Reply text can contain details from your conversation.</li>
+      </ul>
+
+      <p>Voice and AI features require online processing. Storing project files on your device or in iCloud does not keep the content used by these features entirely on your device.</p>
+
+      <h2>3. iCloud Project Storage</h2>
+
+      <p>iCloud Drive is the current app’s only cloud storage path for project files. Apple manages iCloud synchronization, which can be delayed or unavailable. A saved file does not confirm that it has uploaded or reached another device, and some iCloud files may be unavailable offline.</p>
+
+      <p>The current app does not upload project context to Supabase. Device fallback files and preserved copies can remain on the device. Storage location does not change the online voice and AI processing described above.</p>
+
+      <h2>4. Your Choices</h2>
+
+      <ul>
+        <li>You can control microphone access in iOS Settings. Typing a message avoids the audio transcription step, but the message still uses online AI processing and may contribute to saved project context and memory.</li>
+        <li>You can turn <strong>Spoken Replies</strong> off in Clara’s Settings to stop future reply-text requests to ElevenLabs. It is on by default. This does not turn off transcription, AI conversation processing, or iCloud storage, and does not recall a request already sent.</li>
+        <li>When Clara offers recovery for a recording, you can retry transcription or delete that saved recording. This is separate from deleting a project.</li>
+        <li>You can delete a project from the app. The limits of this deletion are explained below.</li>
+      </ul>
+
+      <p>No Clara account is required for the current project flow. This does not make your content anonymous: what you say or type can identify you, and a project identifier links updates to the same project.</p>
+
+      <h2>5. Beta Information and Earlier Versions</h2>
+
+      <p>The current project-conversation app does not run the earlier beta session-log, feedback, consent-profile, or leaderboard uploaders. It does not provide the earlier beta-log sharing toggle. This does not stop the online processing and iCloud storage described above.</p>
+
+      <p>Earlier beta versions could share transcripts, replies, note titles and destinations, session information, feedback, app version and build details, consent records, and activity statistics with Clara’s Supabase backend. Those features used a persistent identifier that could be shared across these records and carried across devices using iCloud. Such records should not be treated as anonymous.</p>
+
+      <p>Some earlier project-conversation builds could also upload the project identifier, title, generated context, and update time to Clara’s Supabase backend. Updating the app or removing its uploader does not delete those records, earlier beta uploads, or deployed backend services. If you use TestFlight, Apple also handles beta usage information, crash logs, and feedback under its own terms.</p>
+
+      <h2>6. Retention and Deletion Limits</h2>
+
+      <p>Deleting a project removes its folder from the app’s selected document storage, including its saved conversation, context, and memory files. If that storage is iCloud-backed, deletion may propagate through iCloud. It does not erase separate recovery audio, provider submissions, historical backend or beta records, preserved copies in another storage location, exports, or backups. iCloud and backup handling are subject to Apple’s controls.</p>
+
+      <p>Clara does not currently offer an in-app control to delete historical backend project copies or older beta uploads. There is no fixed automatic expiry for those records in the current app. Contact us about access or deletion requests; this policy does not promise immediate removal from every service or backup.</p>
+
+      <p>Provider retention and use of request data depend on the service, its terms, and the settings of Clara’s provider accounts. Clara does not promise zero retention, that providers never use content for training, or end-to-end encryption for these processing flows.</p>
+
+      <h2>7. Service Providers</h2>
+
+      <p>For more information about the services involved, see:</p>
+
+      <ul>
+        <li><a href="https://console.groq.com/docs/your-data">Groq data handling</a></li>
+        <li><a href="https://openrouter.ai/docs/guides/privacy/data-collection">OpenRouter data collection</a> and <a href="https://openrouter.ai/docs/guides/privacy/provider-logging">provider logging</a></li>
+        <li><a href="https://openai.com/enterprise-privacy/">OpenAI business data privacy</a></li>
+        <li><a href="https://elevenlabs.io/privacy-policy">ElevenLabs privacy policy</a> and <a href="https://elevenlabs.io/docs/eleven-api/resources/zero-retention-mode">API retention controls</a></li>
+        <li><a href="https://supabase.com/privacy">Supabase privacy policy</a> and <a href="https://supabase.com/legal/customer-resources/data-processing-addendum">data processing addendum</a></li>
+        <li><a href="https://www.apple.com/legal/privacy/en-ww/">Apple privacy policy</a> and <a href="https://www.apple.com/legal/privacy/data/en/test-flight/">TestFlight privacy information</a></li>
+      </ul>
+
+      <p>These links describe provider practices and available controls, including Supabase for historical backend records; they are not a guarantee that a particular optional setting is enabled for Clara.</p>
+
+      <h2>8. Children’s Privacy</h2>
+
+      <p>Clara is not intended for children under 13 and is not designed to knowingly collect personal information from children.</p>
+
+      <h2>9. Changes to This Policy</h2>
+
+      <p>We may update this policy as Clara changes. The “Last updated” date identifies the latest revision.</p>
+
+      <h2>10. Contact</h2>
+
+      <p class="contact">For questions about Clara’s data practices or access and deletion requests, contact <a href="mailto:hello@heyclara.co">hello@heyclara.co</a>.</p>
+    </section>
+  </main>
+</body>
+</html>
